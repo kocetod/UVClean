@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/timersListFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/timersListFragment"
+        android:name="com.ads.uvlamp.Timer.TimersList"
+        android:label="fragment_alltimers"
+        tools:layout="@layout/fragment_timers_list">
+        <action
+            android:id="@+id/open_add_timer_fragment"
+            app:destination="@id/createTimerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createTimerFragment"
+        android:name="com.ads.uvlamp.Timer.AddTimer"
+        android:label="CreateTimerFragment">
+        <action
+            android:id="@+id/open_timers_list_fragment"
+            app:destination="@id/timersListFragment" />
+    </fragment>
+</navigation>
